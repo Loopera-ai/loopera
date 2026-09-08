@@ -1,18 +1,62 @@
 <p align="center">
-  <img src="logo.png" alt="Loopera" width="360">
+  <img src="./logo.png" alt="Loopera — 特征挖掘，洞察无限" width="320" />
 </p>
 
-# Loopera ∞— 基本面量化自迭代Agent
+<h1 align="center">Loopera</h1>
 
-An AI research agent that turns financial data into testable hypotheses
+<p align="center">
+  <strong>面向基本面因子研究的智能 Agent</strong>
+  <br />
+  让研究从零散试验，进化为可验证、可追踪、可持续积累的智能工作流。
+  <br />
+  <sub>Fundamental research, engineered for evidence.</sub>
+</p>
 
-**官网：** https://www.loopera.cn
+<p align="center">
+  <a href="https://www.loopera.cn">
+    <img src="https://img.shields.io/badge/访问官网-0969DA?style=for-the-badge&amp;logo=safari&amp;logoColor=white" alt="访问 Loopera 官网" />
+  </a>
+  <a href="./Loopera技术文档.pdf">
+    <img src="https://img.shields.io/badge/技术文档-6F42C1?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" alt="查看 Loopera 技术文档" />
+  </a>
+  <a href="#完整案例从财务现象到候选因子">
+    <img src="https://img.shields.io/badge/查看案例-1F883D?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="查看完整研究案例" />
+  </a>
+</p>
 
-**技术文档：** [Loopera技术文档.pdf](./Loopera技术文档.pdf)
+<p align="center">
+  <img src="https://img.shields.io/badge/Research-Fundamental-0B7285?style=flat-square" alt="Fundamental Research" />
+  <img src="https://img.shields.io/badge/Framework-Hypothesis--driven-5F3DC4?style=flat-square" alt="Hypothesis-driven Framework" />
+  <img src="https://img.shields.io/badge/Validation-Evidence--gated-2B8A3E?style=flat-square" alt="Evidence-gated Validation" />
+  <img src="https://img.shields.io/badge/Memory-Augmented-C2255C?style=flat-square" alt="Memory-augmented Research" />
+</p>
 
-## 面向基本面因子研究的智能 Agent
+<p align="center">
+  <a href="#产品概览">产品概览</a> ·
+  <a href="#产品框架">产品框架</a> ·
+  <a href="#pdf--prompt-研究输入框架">研究输入</a> ·
+  <a href="#完整案例从财务现象到候选因子">完整案例</a> ·
+  <a href="#不是什么">责任边界</a>
+</p>
 
-Loopera 是一个专注于**基本面因子研究**的智能 Agent。它围绕上市公司的财务报表与经营信息，帮助研究团队持续完成研究方向探索、因子构思、验证评估和知识沉淀。
+---
+
+## 产品概览
+
+Loopera 围绕上市公司的财务报表与经营信息，为基本面量化团队持续完成**研究方向探索、经济假设形成、候选因子构建、可信验证与知识沉淀**。
+
+### 核心价值
+
+| Research | Validate | Remember | Collaborate |
+| --- | --- | --- | --- |
+| 从跨报表经营关系中发现值得解释的现象 | 分离研究逻辑与历史表现，逐层筛选候选 | 保存成果、失败原因与研究谱系 | 支持研究员在关键节点审阅、干预和决策 |
+| 形成可解释、可检验的基本面假设 | 检查时序、口径、稳定性、重复度与增量价值 | 避免重复试错，持续发现研究空白 | 适配小规模任务与多角色协作研究 |
+
+### 面向谁
+
+- **基本面量化团队**：扩展研究覆盖，建立统一、可复核的因子研究流程；
+- **投研与金融科技机构**：把内部报告、研究观点和数据能力连接到标准化验证链路；
+- **研究管理者**：追踪研究来源、决策依据、失败原因及后续方向，而不只查看最终回测结果。
 
 <br>
 
@@ -99,7 +143,7 @@ Loopera 的公开产品框架可以概括为四个部分：
 
 公开版本仅介绍产品能力和研究原则。具体的假设组织方式、验证策略、评价规则、模型协作机制和因子实现属于 Loopera 的核心技术，不在本文档中披露。
 
-## Framework：假设驱动、证据约束、带研究记忆的 Agent 系统
+## 技术框架：假设驱动、证据约束、研究记忆增强
 
 从技术定位上看，Loopera 是一个面向基本面量化研究的 **Hypothesis-driven Agent Framework**。它不是让大模型直接预测股票，也不是将自然语言直接翻译成一个公式，而是把大模型放在一个有数据约束、研究流程和质量控制的环境中。
 
@@ -123,7 +167,7 @@ flowchart LR
 
 ## 系统模块
 
-公开代码可以按职责分为九个模块。下表只描述模块边界，不披露内部评价规则和核心策略。
+系统能力可以按职责分为九个模块。下表只描述模块边界，不披露内部评价规则和核心策略。
 
 | 模块 | 对应能力 | 主要输出 |
 | --- | --- | --- |
@@ -137,7 +181,7 @@ flowchart LR
 | 研究记忆与规划 | 保存研究谱系、失败经验、主题拥挤度和未验证线索，规划后续研究 | 方向看板、失败知识、研究缺口、下一步建议 |
 | 轨迹与报告 | 将一次运行的输入、推理、候选、检查结果和最终结论组织成可阅读报告 | 研究卡片、运行轨迹、候选漏斗、成果报告 |
 
-在代码层面，这些职责分别由数据与面板、Agent 与协作、Pipeline 与 Harness、回测、存储与记忆、轨迹与报告等组件承载。模块之间通过结构化研究对象连接，因此可以单独升级模型、数据源或评价组件，而不需要重写整个研究流程。
+在系统实现层面，这些职责分别由数据与面板、Agent 与协作、Pipeline 与 Harness、回测、存储与记忆、轨迹与报告等组件承载。模块之间通过结构化研究对象连接，因此可以单独升级模型、数据源或评价组件，而不需要重写整个研究流程。
 
 ## PDF / Prompt 研究输入框架
 
@@ -553,4 +597,21 @@ Loopera 不是投资建议系统，不承诺收益，也不替代数据授权、
 
 ---
 
-*Loopera 用于研究与技术评估，不构成任何投资建议。*
+<h2 align="center">让基本面研究形成可持续的复利</h2>
+
+<p align="center">
+  了解 Loopera 的产品能力、技术框架与研究方法。
+</p>
+
+<p align="center">
+  <a href="https://www.loopera.cn">
+    <img src="https://img.shields.io/badge/访问_Loopera-0969DA?style=for-the-badge&amp;logo=safari&amp;logoColor=white" alt="访问 Loopera 官网" />
+  </a>
+  <a href="./Loopera技术文档.pdf">
+    <img src="https://img.shields.io/badge/阅读技术文档-6F42C1?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" alt="阅读 Loopera 技术文档" />
+  </a>
+</p>
+
+<p align="center">
+  <sub>Loopera 用于研究与技术评估，不构成任何投资建议，也不承诺未来收益。</sub>
+</p>
