@@ -12,6 +12,23 @@
 
 Loopera 是一个专注于**基本面因子研究**的智能 Agent。它围绕上市公司的财务报表与经营信息，帮助研究团队持续完成研究方向探索、因子构思、验证评估和知识沉淀。
 
+<br>
+
+<div align="center">
+  <img
+    src="./loopera-system-workflow-agent-v2.png"
+    alt="Loopera AI Research Agent workflow"
+    width="1200"
+  />
+  <br>
+  <sub>
+    Loopera 将研究输入、基本面数据、假设发现、因子设计、
+    可信验证与研究记忆组织成持续学习的 Agent 研究闭环。
+  </sub>
+</div>
+
+<br>
+
 它的目标不是批量生成公式，也不是用一次漂亮的回测替代研究判断。Loopera 更关心一项研究是否有清晰的基本面逻辑、是否经得住多角度验证，以及它是否为已有研究带来新的信息。
 
 > Loopera 将基本面研究从一次性的人工尝试，组织成持续运行、能够积累和进化的研究流程。
