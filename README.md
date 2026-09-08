@@ -1,6 +1,12 @@
+<p align="center">
+  <img src="logo.png" alt="Loopera" width="360">
+</p>
+
 # Loopera
 
 **官网：** https://www.loopera.cn
+
+**技术文档：** [Loopera技术文档.pdf](./Loopera技术文档.pdf)
 
 ## 面向基本面因子研究的智能 Agent
 

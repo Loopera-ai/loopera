@@ -1,4 +1,6 @@
 *
 !.gitignore
+!.gitattributes
 !README.md
-!LOOPERA.pdf
+!logo.png
+!Loopera技术文档.pdf
