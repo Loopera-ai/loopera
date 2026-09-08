@@ -2,7 +2,7 @@
   <img src="logo.png" alt="Loopera" width="360">
 </p>
 
-# Loopera
+# Loopera ∞— Your quant assistant
 
 **官网：** https://www.loopera.cn
 
