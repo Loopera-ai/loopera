@@ -2,7 +2,9 @@
   <img src="logo.png" alt="Loopera" width="360">
 </p>
 
-# Loopera ∞— Your quant assistant
+# Loopera ∞— 让基本面研究持续进化
+
+An AI research agent that turns financial data into testable hypotheses
 
 **官网：** https://www.loopera.cn
 
