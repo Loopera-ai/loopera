@@ -2,7 +2,7 @@
   <img src="logo.png" alt="Loopera" width="360">
 </p>
 
-# Loopera ∞— 让基本面研究持续进化
+# Loopera ∞— 基本面量化自迭代Agent
 
 An AI research agent that turns financial data into testable hypotheses
 
