@@ -1049,7 +1049,7 @@ flowchart LR
   <a href="https://www.loopera.cn">
     <img src="https://img.shields.io/badge/访问_Loopera-0969DA?style=for-the-badge&amp;logo=safari&amp;logoColor=white" alt="访问 Loopera 官网" />
   </a>
-  <a href="./Loopera技术文档.pdf">
+  <a href="./docs/Loopera技术文档.pdf">
     <img src="https://img.shields.io/badge/阅读技术文档-6F42C1?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" alt="阅读 Loopera 技术文档" />
   </a>
   <a href="#完整案例从财务现象到候选因子">
