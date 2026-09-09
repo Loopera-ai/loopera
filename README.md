@@ -838,6 +838,16 @@ flowchart TB
 ## 当前研究产出
 
 <p align="center">
+  <strong>147 次候选尝试 · 66 项结构化假设 · 37 个研究模式 · 5 个入库候选</strong>
+  <br />
+  <sub>完整候选漏斗、研究覆盖与 Agent 独立评估已收起，点击下方查看。</sub>
+</p>
+
+<details>
+<summary><strong>📊 展开当前研究产出与评估结果</strong></summary>
+<br />
+
+<p align="center">
   <strong>下面是一组内部研究运行快照，用来说明 Framework 实际产生了什么。</strong>
   <br />
   <sub>These numbers describe research activity—not investable signals.</sub>
@@ -956,6 +966,8 @@ flowchart LR
 </table>
 
 > 综合真实运行与模拟实验，Loopera 已经是一套可运行、可验证、可积累的基本面研究 Framework。当前最明确的价值是扩大研究覆盖、规范研究过程并保存可复核证据，而不是承诺自动发现稳定 Alpha。
+
+</details>
 
 ## 适用场景
 
