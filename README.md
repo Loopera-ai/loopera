@@ -62,7 +62,7 @@ Loopera 围绕上市公司的财务报表与经营信息，为基本面量化团
 
 <div align="center">
   <img
-    src="./loopera-system-workflow-agent-v2.png"
+    src="./assets/images/loopera-system-workflow-agent-v2.png"
     alt="Loopera AI Research Agent workflow"
     width="1200"
   />
