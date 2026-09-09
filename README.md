@@ -159,60 +159,202 @@ Loopera 主要围绕企业的盈利质量、现金流、资产负债结构、营
 
 ## 产品框架
 
-Loopera 的公开产品框架可以概括为四个部分：
+<p align="center">
+  <strong>Loopera 把研究意图转化为经证据验证、可以持续复用的研究资产。</strong>
+  <br />
+  <sub>Understand the business → Form a hypothesis → Test the evidence → Compound the knowledge</sub>
+</p>
 
-| 产品能力 | 作用 |
-| --- | --- |
-| 基本面理解 | 理解财务字段、报表关系、企业经营含义和行业差异 |
-| 智能研究 | 发现现象、提出假设、比较不同解释并形成候选方向 |
-| 可信验证 | 从数据时点、研究逻辑、结果稳健性和新增信息等角度进行质量控制 |
-| 研究记忆 | 沉淀成果、失败经验和研究脉络，为下一轮研究提供依据 |
+### 一条产品闭环
 
-这些能力共同形成一个闭环：
+```mermaid
+flowchart LR
+    A["研究输入<br/>Topic · Prompt · PDF"] --> B["基本面理解<br/>字段 · 报表 · 行业语境"]
+    B --> C["智能研究<br/>现象 · 机制 · 候选"]
+    C --> D["可信验证<br/>时点 · 逻辑 · 稳健性 · 增量"]
+    D --> E["研究记忆<br/>成果 · 失败 · 谱系"]
+    E -. "反哺下一轮" .-> C
 
-**基本面数据 → 研究问题 → 基本面假设 → 候选因子 → 可信验证 → 研究记忆**
+    classDef input fill:#E8F7FF,stroke:#168CFF,color:#07142E,stroke-width:1.5px;
+    classDef research fill:#F1ECFF,stroke:#7C3AED,color:#07142E,stroke-width:1.5px;
+    classDef evidence fill:#E8FFF7,stroke:#0F9F8F,color:#07142E,stroke-width:1.5px;
+    classDef memory fill:#FFF2FB,stroke:#C13C8A,color:#07142E,stroke-width:1.5px;
+    class A,B input;
+    class C research;
+    class D evidence;
+    class E memory;
+```
+
+<table>
+  <tr>
+    <td width="25%" align="center" valign="top">
+      <h3>🧱 基本面理解</h3>
+      <p>建立字段、报表、时点与行业语境。</p>
+    </td>
+    <td width="25%" align="center" valign="top">
+      <h3>🧠 智能研究</h3>
+      <p>从经营现象形成机制与候选方向。</p>
+    </td>
+    <td width="25%" align="center" valign="top">
+      <h3>🛡️ 可信验证</h3>
+      <p>让研究主张逐层通过证据门。</p>
+    </td>
+    <td width="25%" align="center" valign="top">
+      <h3>🗂️ 研究记忆</h3>
+      <p>沉淀成果、失败原因与研究谱系。</p>
+    </td>
+  </tr>
+</table>
+
+> **产品闭环的终点不是一条因子，而是可复核的研究资产。** 每次运行都保留问题、假设、证据、结论与后续方向。
 
 公开版本仅介绍产品能力和研究原则。具体的假设组织方式、验证策略、评价规则、模型协作机制和因子实现属于 Loopera 的核心技术，不在本文档中披露。
 
 ## 技术框架：假设驱动、证据约束、研究记忆增强
 
-从技术定位上看，Loopera 是一个面向基本面量化研究的 **Hypothesis-driven Agent Framework**。它不是让大模型直接预测股票，也不是将自然语言直接翻译成一个公式，而是把大模型放在一个有数据约束、研究流程和质量控制的环境中。
+<p align="center">
+  <strong>核心能力不来自“让一个模型自由发挥”，而来自 Agent、确定性程序与研究记忆的协同。</strong>
+  <br />
+  <sub>A research environment around the model—not a model wrapped around a backtest.</sub>
+</p>
 
-其工作方式可以概括为三点：
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <h3>💡 Hypothesis-driven</h3>
+      <p><strong>先解释，再计算。</strong></p>
+      <p>从经营异常出发，比较竞争机制，再把可验证的解释转成候选。</p>
+      <p align="center"><code>现象 → 机制 → 候选</code></p>
+    </td>
+    <td width="34%" valign="top">
+      <h3>🛡️ Evidence-gated</h3>
+      <p><strong>证据决定能否继续。</strong></p>
+      <p>数据、时点、口径、逻辑、稳健性与增量价值构成连续关卡。</p>
+      <p align="center"><code>主张 → 检查 → 决策</code></p>
+    </td>
+    <td width="33%" valign="top">
+      <h3>🧠 Memory-augmented</h3>
+      <p><strong>让研究拥有上下文。</strong></p>
+      <p>保存成功、失败、相似构造与未完成线索，减少重复并发现空白。</p>
+      <p align="center"><code>轨迹 → 记忆 → 下一轮</code></p>
+    </td>
+  </tr>
+</table>
 
-1. **假设驱动（Hypothesis-driven）**：先解释企业经营中出现了什么异常，再提出可能的经营机制，最后形成可检验的候选因子。
-2. **证据约束（Evidence-gated）**：候选必须依次通过数据、逻辑、经济含义和统计表现等检查；任一关键问题都可以终止该候选。
-3. **记忆增强（Memory-augmented）**：成功、失败、相似构造和未完成的研究线索都会被保存，成为后续研究的上下文。
+### 三种能力如何协同
 
 ```mermaid
 flowchart LR
-    A[基本面数据] --> B[研究问题]
-    B --> C[基本面假设]
-    C --> D[候选因子]
-    D --> E[多层验证]
-    E --> F[研究成果与失败知识]
-    F -. 反馈下一轮 .-> B
+    A["AI Agent<br/>提出 · 解释 · 修订"] --> B["Research Contract<br/>假设 · 字段 · 方向 · 约束"]
+    B --> C["Deterministic Harness<br/>计算 · 检查 · 评价"]
+    C --> D["Research Memory<br/>结果 · 失败 · 谱系"]
+    D -. "提供研究上下文" .-> A
+    H["Human Researcher<br/>审阅 · 干预 · 决策"] <--> B
+
+    classDef agent fill:#F1ECFF,stroke:#7C3AED,color:#07142E,stroke-width:1.5px;
+    classDef contract fill:#E8F7FF,stroke:#168CFF,color:#07142E,stroke-width:1.5px;
+    classDef evidence fill:#E8FFF7,stroke:#0F9F8F,color:#07142E,stroke-width:1.5px;
+    classDef memory fill:#FFF2FB,stroke:#C13C8A,color:#07142E,stroke-width:1.5px;
+    classDef human fill:#FFF8E6,stroke:#D98E04,color:#07142E,stroke-width:1.5px;
+    class A agent;
+    class B contract;
+    class C evidence;
+    class D memory;
+    class H human;
 ```
 
-这一 Framework 的关键并不是某一个模型，而是围绕模型建立的完整研究环境：模型负责提出、解释和改进想法，确定性的程序负责数据计算与客观检查，研究记忆负责让整个系统持续进化。
+- **AI Agent** 扩展研究空间，负责提出、解释与修订想法；
+- **Research Contract** 把自然语言主张固定成可计算、可审查的结构化对象；
+- **Deterministic Harness** 负责计算和客观检查，不让叙事替代证据；
+- **Research Memory** 为下一轮提供成果、失败和研究谱系；
+- **Human Researcher** 在关键节点保留审阅、干预与最终决策权。
 
 ## 系统模块
 
-系统能力可以按职责分为九个模块。下表只描述模块边界，不披露内部评价规则和核心策略。
+<p align="center">
+  <strong>九个模块组成三层架构：上层负责交互与编排，中层负责研究推理，下层提供数据、评价与长期记忆。</strong>
+  <br />
+  <sub>Each layer can evolve independently while sharing the same structured research objects.</sub>
+</p>
 
-| 模块 | 对应能力 | 主要输出 |
+### 三层系统架构
+
+```mermaid
+flowchart TB
+    subgraph L1["01 · 研究交互与编排层"]
+      direction LR
+      A["研究输入与材料理解"] --> B["Agent 编排"] --> C["轨迹与报告"]
+    end
+
+    subgraph L2["02 · 假设与因子研究层"]
+      direction LR
+      D["假设研究"] --> E["因子构建"] --> F["可信验证"]
+    end
+
+    subgraph L3["03 · 数据、评价与记忆层"]
+      direction LR
+      G["数据与字段系统"] --> H["回测与增量评估"] --> I["研究记忆与规划"]
+    end
+
+    A --> D
+    B --> D
+    E --> H
+    F --> H
+    H --> C
+    G --> D
+    G --> E
+    I -. "反馈研究上下文" .-> D
+
+    classDef experience fill:#E8F7FF,stroke:#168CFF,color:#07142E,stroke-width:1.5px;
+    classDef engine fill:#F1ECFF,stroke:#7C3AED,color:#07142E,stroke-width:1.5px;
+    classDef foundation fill:#E8FFF7,stroke:#0F9F8F,color:#07142E,stroke-width:1.5px;
+    class A,B,C experience;
+    class D,E,F engine;
+    class G,H,I foundation;
+```
+
+<table>
+  <tr>
+    <th width="18%">系统层</th>
+    <th width="34%">回答的问题</th>
+    <th width="48%">包含模块</th>
+  </tr>
+  <tr>
+    <td><strong>🔵 研究交互与编排</strong></td>
+    <td>研究从哪里来、如何协作、怎样被看见？</td>
+    <td>研究输入与材料理解 · Agent 编排 · 轨迹与报告</td>
+  </tr>
+  <tr>
+    <td><strong>🟣 假设与因子研究</strong></td>
+    <td>现象如何变成可验证的候选？</td>
+    <td>假设研究 · 因子构建 · 可信验证</td>
+  </tr>
+  <tr>
+    <td><strong>🟢 数据、评价与记忆</strong></td>
+    <td>证据从哪里来、如何评价、如何积累？</td>
+    <td>数据与字段系统 · 回测与增量评估 · 研究记忆与规划</td>
+  </tr>
+</table>
+
+<details>
+<summary><strong>查看九个模块的职责与主要输出</strong></summary>
+<br />
+
+| 模块 | 核心职责 | 主要输出 |
 | --- | --- | --- |
-| 研究输入与材料理解 | 接收 Topic、文本 Prompt 或 PDF，将外部材料转成统一、可追踪的研究输入 | 材料摘要、观点清单、候选公式目录、来源信息 |
-| 数据与字段系统 | 统一三张财务报表的字段含义、数据版本和公开时间，构建研究可用的基本面面板 | 标准化基本面数据、字段目录、数据质量信息 |
-| Agent 编排 | 支持单 Agent 任务和多研究角色协作，控制一次研究如何提出、执行和结束 | 研究轮次、角色意见、任务状态 |
-| 假设研究 | 从不同基本面视角提出研究方向，并把一个现象拆成若干可以比较的解释 | 研究主题、经营机制、可观察证据、失效条件 |
-| 因子构建 | 将研究假设转换为能够在财务面板上计算的候选因子 | 候选构造、使用字段、预期方向、经济解释 |
-| 可信验证 | 检查数据使用、计算稳定性、时序有效性、会计口径、逻辑一致性和重复度 | 每一项检查的结论与拒绝原因 |
-| 回测与增量评估 | 在统一研究口径下评价候选表现，并判断其是否提供已有因子之外的信息 | IC、分组表现、覆盖率、稳定性和增量性摘要 |
-| 研究记忆与规划 | 保存研究谱系、失败经验、主题拥挤度和未验证线索，规划后续研究 | 方向看板、失败知识、研究缺口、下一步建议 |
-| 轨迹与报告 | 将一次运行的输入、推理、候选、检查结果和最终结论组织成可阅读报告 | 研究卡片、运行轨迹、候选漏斗、成果报告 |
+| **研究输入与材料理解** | 接收 Topic、Prompt 或 PDF，并转成统一、可追踪的研究输入 | 材料摘要、观点清单、公式目录、来源信息 |
+| **数据与字段系统** | 统一财务字段、数据版本与公开时间，构建基本面面板 | 标准化数据、字段目录、质量信息 |
+| **Agent 编排** | 组织单 Agent 或多角色协作，管理研究的提出、执行与结束 | 研究轮次、角色意见、任务状态 |
+| **假设研究** | 从经营现象提出并比较可验证的解释 | 研究主题、经营机制、证据与失效条件 |
+| **因子构建** | 将研究假设转成可计算的候选对象 | 候选构造、使用字段、预期方向、经济解释 |
+| **可信验证** | 检查数据、时序、口径、逻辑、稳健性与重复度 | 各项检查结论与拒绝原因 |
+| **回测与增量评估** | 统一评价历史表现及相对已有因子的新增信息 | IC、分组表现、覆盖率、稳定性与增量摘要 |
+| **研究记忆与规划** | 保存谱系、失败经验、拥挤度与未验证线索 | 方向看板、失败知识、研究缺口、下一步建议 |
+| **轨迹与报告** | 把输入、推理、候选、检查与结论组织成可读成果 | 研究卡片、运行轨迹、候选漏斗、成果报告 |
 
-在系统实现层面，这些职责分别由数据与面板、Agent 与协作、Pipeline 与 Harness、回测、存储与记忆、轨迹与报告等组件承载。模块之间通过结构化研究对象连接，因此可以单独升级模型、数据源或评价组件，而不需要重写整个研究流程。
+</details>
+
+> 模块之间通过结构化研究对象连接，因此可以独立升级模型、数据源或评价组件，而不需要重写整条研究流程。
 
 ## PDF / Prompt 研究输入框架
 
