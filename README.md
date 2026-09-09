@@ -509,6 +509,10 @@ PDF 目前需要包含可提取的文本，并依赖系统安装 `pdftotext`。�
   <sub>Context → Question → Mechanisms → Candidate → Evidence Gates → Memory</sub>
 </p>
 
+<details>
+<summary><strong>🧭 展开六阶段研究闭环与 Evidence Gates</strong></summary>
+<br />
+
 ### 六阶段研究闭环
 
 ```mermaid
@@ -581,6 +585,8 @@ flowchart LR
 | 📈 **表现与增量** | 历史证据是否具备基本质量，并提供新增信息？ | 入库 / 停止 |
 
 > **每个结论都带着证据离开流水线。** Loopera 保存候选为何被提出、通过了哪些检查、在哪里停止，以及下一轮研究应继续追问什么。
+
+</details>
 
 ## Agent 实际输出什么
 
