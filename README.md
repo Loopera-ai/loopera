@@ -600,6 +600,16 @@ Loopera 的最小交付单位不是“因子名称 + 一条回测曲线”，而
 ## 完整案例：从财务现象到候选因子
 
 <p align="center">
+  <strong>一条真实研究轨迹：从会计异常到通过证据门的候选。</strong>
+  <br />
+  <sub>案例摘要、九步轨迹、验证结果与证据边界已收起，点击下方查看。</sub>
+</p>
+
+<details>
+<summary><strong>🔎 展开完整案例：薪酬负债异常 × 收入现金化压力</strong></summary>
+<br />
+
+<p align="center">
   <strong>案例主题：薪酬负债异常，是否包含尚未被市场充分理解的现金结算压力？</strong>
   <br />
   <sub>A real research trace—from an accounting anomaly to an evidence-qualified candidate.</sub>
@@ -789,6 +799,8 @@ flowchart TB
 </table>
 
 > **完整交付不是一个公式。** 它是一条研究问题、多个竞争机制、一项可执行候选、一组逐层验证证据、一份带限制条件的解释，以及能够被下一轮继续使用的研究记忆。
+
+</details>
 
 ## 核心特点
 
