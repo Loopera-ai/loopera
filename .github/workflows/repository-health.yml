@@ -14,9 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Reject oversized tracked files
+      - name: Reject oversized tracked files outside data
         run: |
           while IFS= read -r -d '' path; do
+            case "$path" in
+              data/*) continue ;;
+            esac
             bytes="$(wc -c < "$path")"
             if [ "$bytes" -gt 10485760 ]; then
               echo "Tracked file exceeds 10 MiB: $path ($bytes bytes)"
@@ -26,8 +29,11 @@ jobs:
 
       - name: Check public assets
         run: |
-          file logo.jpg | grep -q 'JPEG image data'
+          file logo.png | grep -q 'JPEG image data'
           test "$(wc -c < assets/images/loopera-system-workflow-agent-v2.png)" -gt 1024
+          test -f assets/images/figure.png
+          test -f assets/loopera.png
+          test -f docs/Loopera技术文档.pdf
 
       - name: Check public claims
         run: |

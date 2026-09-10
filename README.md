@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./logo.jpg" alt="Loopera — 特征挖掘，洞察无限" width="320" />
+  <img src="./logo.png" alt="Loopera — 特征挖掘，洞察无限" width="320" />
 </p>
 
 <h1 align="center">Loopera</h1>
@@ -15,6 +15,9 @@
 <p align="center">
   <a href="https://loopera.cn/">
     <img src="https://img.shields.io/badge/访问_Loopera_官网-0969DA?style=for-the-badge&amp;logo=safari&amp;logoColor=white" alt="访问 Loopera 官网" />
+  </a>
+  <a href="./docs/Loopera技术文档.pdf">
+    <img src="https://img.shields.io/badge/技术文档-6F42C1?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" alt="查看 Loopera 技术文档" />
   </a>
   <a href="#完整案例从财务现象到候选因子">
     <img src="https://img.shields.io/badge/查看案例-1F883D?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="查看完整研究案例" />
@@ -63,7 +66,7 @@ Loopera 围绕上市公司的财务报表与经营信息，为基本面量化团
 
 <div align="center">
   <img
-    src="./assets/images/loopera-system-workflow-agent-v2.png"
+    src="./assets/images/arch.png"
     alt="Loopera AI Research Agent workflow"
     width="1200"
   />
@@ -1015,6 +1018,9 @@ flowchart LR
 <p align="center">
   <a href="https://loopera.cn/">
     <img src="https://img.shields.io/badge/访问_Loopera_官网-0969DA?style=for-the-badge&amp;logo=safari&amp;logoColor=white" alt="访问 Loopera 官网" />
+  </a>
+  <a href="./assets/docs/Loopera技术文档.pdf">
+    <img src="https://img.shields.io/badge/阅读技术文档-6F42C1?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" alt="阅读 Loopera 技术文档" />
   </a>
   <a href="#完整案例从财务现象到候选因子">
     <img src="https://img.shields.io/badge/返回案例-1F883D?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="返回完整研究案例" />
