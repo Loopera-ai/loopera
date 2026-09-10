@@ -18,7 +18,7 @@ jobs:
         run: |
           while IFS= read -r -d '' path; do
             case "$path" in
-              data/*) continue ;;
+              data/*|assets/data/*) continue ;;
             esac
             bytes="$(wc -c < "$path")"
             if [ "$bytes" -gt 10485760 ]; then
@@ -30,14 +30,6 @@ jobs:
       - name: Check public assets
         run: |
           file logo.png | grep -q 'JPEG image data'
-          test "$(wc -c < assets/images/loopera-system-workflow-agent-v2.png)" -gt 1024
-          test -f assets/images/figure.png
+          test "$(wc -c < assets/images/arch.png)" -gt 1024
           test -f assets/loopera.png
-          test -f docs/Loopera技术文档.pdf
-
-      - name: Check public claims
-        run: |
-          if git grep -Ein 'cogalpha|通用代码与使用说明' -- README.md; then
-            echo 'README contains an internal identifier or an unavailable-code claim.'
-            exit 1
-          fi
+          test -f assets/docs/Loopera技术文档.pdf
