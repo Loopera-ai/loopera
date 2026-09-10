@@ -1,8 +1,30 @@
-*
-!.gitignore
-!.gitattributes
-!README.md
-!logo.png
-!Loopera技术文档.pdf
-!demos/
-!demos/**
+# Local and proprietary datasets
+data/
+*.csv
+*.parquet
+
+# Python and notebook artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Environment files and credentials
+.env
+.env.*
+!.env.example
+
+# Editors and operating systems
+.DS_Store
+.idea/
+.vscode/
+
+# Temporary and generated output
+*.log
+tmp/
+dist/
+build/

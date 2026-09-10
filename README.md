@@ -1,23 +1,20 @@
 <p align="center">
-  <img src="./logo.png" alt="Loopera — 特征挖掘，洞察无限" width="320" />
+  <img src="./logo.jpg" alt="Loopera — 特征挖掘，洞察无限" width="320" />
 </p>
 
 <h1 align="center">Loopera</h1>
 
 <p align="center">
-  <strong>面向基本面因子研究的智能 Agent</strong>
+  <strong>特征挖掘，洞察无限</strong>
   <br />
-  让研究从零散试验，进化为可验证、可追踪、可持续积累的智能工作流。
+  面向基本面因子研究的智能 Agent
   <br />
   <sub>Fundamental research, engineered for evidence.</sub>
 </p>
 
 <p align="center">
-  <a href="https://www.loopera.cn">
-    <img src="https://img.shields.io/badge/访问官网-0969DA?style=for-the-badge&amp;logo=safari&amp;logoColor=white" alt="访问 Loopera 官网" />
-  </a>
-  <a href="./docs/Loopera技术文档.pdf">
-    <img src="https://img.shields.io/badge/技术文档-6F42C1?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" alt="查看 Loopera 技术文档" />
+  <a href="https://github.com/Loopera-ai">
+    <img src="https://img.shields.io/badge/项目主页-0969DA?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="访问 Loopera 项目主页" />
   </a>
   <a href="#完整案例从财务现象到候选因子">
     <img src="https://img.shields.io/badge/查看案例-1F883D?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="查看完整研究案例" />
@@ -25,6 +22,8 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Status-Public_preview-D97706?style=flat-square" alt="Status: Public preview" />
+  <img src="https://img.shields.io/badge/License-BSL_1.1-7950F2?style=flat-square" alt="License: BSL 1.1 (not open source)" />
   <img src="https://img.shields.io/badge/Research-Fundamental-0B7285?style=flat-square" alt="Fundamental Research" />
   <img src="https://img.shields.io/badge/Framework-Hypothesis--driven-5F3DC4?style=flat-square" alt="Hypothesis-driven Framework" />
   <img src="https://img.shields.io/badge/Validation-Evidence--gated-2B8A3E?style=flat-square" alt="Evidence-gated Validation" />
@@ -40,6 +39,8 @@
 </p>
 
 ---
+
+> **仓库定位：** 这是 Loopera 的公开产品与技术资料仓库，不是源代码发行包。当前不提供可运行代码、安装包、CLI 或公开 API；README 中的流程和案例用于说明产品能力与证据边界。
 
 ## 产品概览
 
@@ -484,23 +485,6 @@ Loopera 会从输入材料中识别：
 
 </details>
 
-<!--### 使用示例
-
-```bash
-# 从主题开始
-python -m cogalpha.cli swarm --topic "cash flow quality" -i 20
-
-# 使用研究员 Prompt
-python -m cogalpha.cli swarm --guidance-text \
-  "研究库存增长未被收入增长承接的基本面风险" -i 20
-
-# 使用 PDF，并给出研究锚点
-python -m cogalpha.cli swarm --topic "fundamental quality" \
-  --guidance-pdf research.pdf --source-candidate-limit 3 -i 20
-```
-
-PDF 目前需要包含可提取的文本，并依赖系统安装 `pdftotext`。纯扫描图片、加密文件或无法提取文字的 PDF 需要先完成 OCR 或转换。`source-candidate-limit` 只限制一份材料中优先验证的明确候选数量，不会扩大一次运行原有的研究预算。-->
-
 ## 一次研究如何运行
 
 <p align="center">
@@ -728,15 +712,13 @@ flowchart TB
 
 #### ⑤ 验证数据与实现
 
-- 形成约 **15.6 万** 个有效财务观测；
-- 日频研究面板平均覆盖约 **3,020 家公司**，约占当时可交易研究域的 **76%**；
-- 在多个历史信息截面进行超过 **120 万次** 一致性比较，没有发现未来信息改变历史结果；
+- 验证有效财务观测、研究面板覆盖与历史信息截面的一致性；
 - 相比已有尝试，引入新的跨报表机制信息，而非只替换分母；
 - 存量负债、期间收入与累计现金流分别按适合的财务口径处理。
 
 #### ⑥ 在不知道回测成绩时审查逻辑
 
-独立审查角色只读取研究假设、字段含义与候选实现，不读取回测收益。该候选的经济逻辑审查得分为 **73/100**，可以继续，但必须保留以下限制：
+独立审查角色只读取研究假设、字段含义与候选实现，不读取回测收益。该候选通过经济逻辑审查后继续，但必须保留以下限制：
 
 - “销售现金流入相对收入偏低”更准确地表示现金实现不足，不能直接等同于客户回款违约；
 - 奖金计提与支付具有季节性，同行比较只能缓解、不能完全消除；
@@ -752,7 +734,7 @@ flowchart TB
 
 #### ⑦ 评价历史表现与新增信息
 
-候选通过逻辑审查后才进入完整研究评估。该轮内部全样本结果见下方“关键结果一览”。
+候选通过逻辑审查后才进入完整研究评估。由于公开材料未同时披露可复核的样本区间、股票池、调仓规则、成本与换手假设，本 README 不展示具体业绩数字。
 
 #### ⑧ 比较同一家族的其他候选
 
@@ -773,21 +755,9 @@ flowchart TB
 
 </details>
 
-### 关键结果一览
+### 公开证据边界
 
-| 指标 | 结果 | 研究含义 |
-| --- | ---: | --- |
-| Rank IC 均值 | **0.0038** | 候选排序与后续收益存在较弱但持续的横截面关系 |
-| IC 胜率 | **56.2%** | 超过一半的观察期方向一致 |
-| 多空年化收益 | **3.64%** | 研究组合两端在历史窗口中的年化差异 |
-| 多空 Sharpe | **0.85** | 历史收益与波动的比例 |
-| 最大回撤 | **-9.69%** | 研究组合历史最大累计回撤 |
-| 分组单调性 | **0.893** | 从低暴露到高暴露呈现较清晰顺序 |
-| 平均回测覆盖率 | **67.1%** | 覆盖研究域中的相当一部分公司 |
-| 中性化后 IC | **0.0043** | 控制常见风险暴露后仍保留一定信息 |
-| 增量残差 IC | **0.0027** | 剔除已有因子解释后仍存在新增信息 |
-
-> 以上均为**内部全样本研究指标**，不是独立样本外结果。它们说明该假设值得进入下一阶段研究，不代表未来收益、实盘表现或可直接交易的 Alpha。
+README 只披露研究问题、机制、验证流程与结论边界。完整口径公布前，不对外展示 Rank IC、Sharpe、年化收益、回撤或覆盖率等容易被误读为产品业绩的弱指标。
 
 ### 证据支持到哪里
 
@@ -936,15 +906,7 @@ flowchart LR
   </tr>
 </table>
 
-| 聚合研究指标 | 当前观察区间 |
-| --- | ---: |
-| Rank IC 绝对值 | **0.0035–0.0065** |
-| 多空年化收益绝对值 | **2.54%–6.12%** |
-| 多空 Sharpe 绝对值 | **0.55–0.98** |
-| 分组单调性绝对值 | **0.81–0.94** |
-| 平均覆盖率 | **51.9%–82.0%** |
-
-为避免公开核心构造，这里不列出字段组合与公式。这些聚合数字只说明输出形态，不代表样本外业绩、实盘验证或投资建议。
+当前公开页面不列出入库候选的字段组合、生产公式或业绩区间。对外信息聚焦于研究流程、可追溯证据和明确的能力边界。
 
 ### 对 Agent 能力的独立评估
 
@@ -1020,7 +982,6 @@ flowchart LR
     <td valign="top">
       <ul>
         <li>产品框架与研究原则</li>
-        <li>通用代码与使用说明</li>
         <li>聚合实验结论</li>
         <li>不暴露核心构造的案例说明</li>
       </ul>
@@ -1037,6 +998,12 @@ flowchart LR
   </tr>
 </table>
 
+## 许可证与使用
+
+本仓库采用 [Business Source License 1.1](./LICENSE)（BSL 1.1），**不是经 OSI 批准的开源许可证**。当前 Additional Use Grant 为 `None`，因此仅允许许可文本所述的非生产性使用；在 2030-09-09 或许可文本规定的更早日期起，相应版本将转为 Apache License 2.0。GitHub 显示 `Other / NOASSERTION` 是此类许可的预期结果。
+
+本仓库不使用“开源”描述当前授权状态。商业、生产或合同场景下，请通过[GitHub Issues](https://github.com/Loopera-ai/loopera/issues/new)先确认授权条款、签约主体与数据权利。第三方组件和数据不因本仓库的 LICENSE 而获得转授权。
+
 ---
 
 <h2 align="center">让基本面研究形成可持续的复利</h2>
@@ -1046,11 +1013,8 @@ flowchart LR
 </p>
 
 <p align="center">
-  <a href="https://www.loopera.cn">
-    <img src="https://img.shields.io/badge/访问_Loopera-0969DA?style=for-the-badge&amp;logo=safari&amp;logoColor=white" alt="访问 Loopera 官网" />
-  </a>
-  <a href="./docs/Loopera技术文档.pdf">
-    <img src="https://img.shields.io/badge/阅读技术文档-6F42C1?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" alt="阅读 Loopera 技术文档" />
+  <a href="https://github.com/Loopera-ai">
+    <img src="https://img.shields.io/badge/Loopera_主页-0969DA?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="访问 Loopera 项目主页" />
   </a>
   <a href="#完整案例从财务现象到候选因子">
     <img src="https://img.shields.io/badge/返回案例-1F883D?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="返回完整研究案例" />
