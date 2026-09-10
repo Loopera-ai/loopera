@@ -26,7 +26,7 @@
     <img src="https://img.shields.io/badge/查看案例-1F883D?style=for-the-badge&logo=github&logoColor=white" alt="查看完整研究案例" />
   </a>
 
-  <a href="loopera/assets/demo/loopera_demo.mp4">
+  <a href="./loopera/assets/demo/loopera_demo.mp4">
     <img src="https://img.shields.io/badge/观看_Demo-FF4B4B?style=for-the-badge&logo=youtube&logoColor=white" alt="观看 Loopera Demo 演示视频" />
   </a>
 
