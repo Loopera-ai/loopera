@@ -13,15 +13,23 @@
 </p>
 
 <p align="center">
+
   <a href="https://loopera.cn/">
-    <img src="https://img.shields.io/badge/访问_Loopera_官网-0969DA?style=for-the-badge&amp;logo=safari&amp;logoColor=white" alt="访问 Loopera 官网" />
+    <img src="https://img.shields.io/badge/访问_Loopera_官网-0969DA?style=for-the-badge&logo=safari&logoColor=white" alt="访问 Loopera 官网" />
   </a>
+
   <a href="./assets/docs/Loopera技术文档.pdf">
-    <img src="https://img.shields.io/badge/技术文档-6F42C1?style=for-the-badge&amp;logo=readthedocs&amp;logoColor=white" alt="查看 Loopera 技术文档" />
+    <img src="https://img.shields.io/badge/技术文档-6F42C1?style=for-the-badge&logo=readthedocs&logoColor=white" alt="查看 Loopera 技术文档" />
   </a>
+
   <a href="#完整案例从财务现象到候选因子">
-    <img src="https://img.shields.io/badge/查看案例-1F883D?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="查看完整研究案例" />
+    <img src="https://img.shields.io/badge/查看案例-1F883D?style=for-the-badge&logo=github&logoColor=white" alt="查看完整研究案例" />
   </a>
+
+  <a href="loopera/assets/demo/loopera_demo.mp4">
+    <img src="https://img.shields.io/badge/观看_Demo-FF4B4B?style=for-the-badge&logo=youtube&logoColor=white" alt="观看 Loopera Demo 演示视频" />
+  </a>
+
 </p>
 
 <p align="center">
