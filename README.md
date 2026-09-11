@@ -1009,11 +1009,9 @@ flowchart LR
   </tr>
 </table>
 
-## 许可证与使用
+<!--## 许可证与使用
 
-本仓库采用 [Business Source License 1.1](./LICENSE)（BSL 1.1），**不是经 OSI 批准的开源许可证**。当前 Additional Use Grant 为 `None`，因此仅允许许可文本所述的非生产性使用；在 2030-09-09 或许可文本规定的更早日期起，相应版本将转为 Apache License 2.0。GitHub 显示 `Other / NOASSERTION` 是此类许可的预期结果。
-
-本仓库不使用“开源”描述当前授权状态。商业、生产或合同场景下，请通过 [Loopera 官网](https://loopera.cn/) 公布的联系方式，先确认授权条款、签约主体与数据权利。第三方组件和数据不因本仓库的 LICENSE 而获得转授权。
+本仓库采用 [Business Source License 1.1](./LICENSE)（BSL 1.1），**不是经 OSI 批准的开源许可证**。当前 Additional Use Grant 为 `None`，因此仅允许许可文本所述的非生产性使用；在 2030-09-09 或许可文本规定的更早日期起，相应版本将转为 Apache License 2.0。GitHub 显示 `Other / NOASSERTION` 是此类许可的预期结果。本仓库不使用“开源”描述当前授权状态。商业、生产或合同场景下，请通过 [Loopera 官网](https://loopera.cn/) 公布的联系方式，先确认授权条款、签约主体与数据权利。第三方组件和数据不因本仓库的 LICENSE 而获得转授权。-->
 
 ---
 
