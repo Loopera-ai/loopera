@@ -7,7 +7,7 @@
 <p align="center">
   <strong>特征挖掘，洞察无限</strong>
   <br />
-  面向基本面因子研究的智能 Agent
+  面向基本面因子研究的智能体Agent
   <br />
   <sub>Fundamental research, engineered for evidence.</sub>
 </p>
