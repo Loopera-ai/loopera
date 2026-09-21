@@ -1,4 +1,13 @@
 <p align="center">
+  <a href="./README.md">
+    <img src="https://img.shields.io/badge/简体中文-0969DA?style=for-the-badge" alt="简体中文" />
+  </a>
+  <a href="./README_EN.md">
+    <img src="https://img.shields.io/badge/English-6B7280?style=for-the-badge" alt="English" />
+  </a>
+</p>
+
+<p align="center">
   <img src="./logo.png" alt="Loopera — 特征挖掘，洞察无限" width="320" />
 </p>
 
